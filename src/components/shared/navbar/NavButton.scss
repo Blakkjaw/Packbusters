@@ -10,3 +10,14 @@
 .navButton:hover {
   color: black;
 }
+
+.navButton__title {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.navButton__icon {
+  object-fit: contain;
+  height: 25px !important;
+  width: 25px !important;
+}

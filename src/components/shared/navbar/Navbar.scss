@@ -10,11 +10,6 @@
   z-index: 999;
 }
 
-.navbar__pageName {
-  margin-right: 20px;
-  margin-top: 40px;
-}
-
 .navbar__left {
   display: flex;
 }
@@ -23,21 +18,6 @@
   object-fit: contain;
   height: 40px;
   margin-right: 10px;
-}
-
-.btn__group {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  height: 22px;
-  color: gray;
-}
-
-input {
-  outline: none;
-  border: none;
-  background: none;
 }
 
 .navbar__right {

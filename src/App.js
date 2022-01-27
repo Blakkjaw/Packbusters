@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.scss';
-import Navbar from './Navbar';
+import Navbar from './components/shared/navbar/Navbar.js';
+import Carousel from './components/home/Carousel';
 
 function App() {
   return (
     <div className="app">
-      {/*Navbar*/}
       <Navbar></Navbar>
-      {/*App body */}
+      <div className='app__body'>
+        <Carousel></Carousel>
         {/*Carousel*/}
         {/* Highlights */}
         {/* New */}
+      </div>
     </div>
   );
 }
