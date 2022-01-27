@@ -1,0 +1,12 @@
+.navButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  color: gray;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  color: black;
+}

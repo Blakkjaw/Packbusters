@@ -1,0 +1,95 @@
+$background-color: #262626;
+$button: #000000;
+$button-hover: #ffffff;
+$radius1: 25px;
+$radius2: $radius1 * 2;
+
+// Text styling mixin
+@mixin text {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.33;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+// Vendor prefix mixin for skew
+$prefix: "-webkit", "-moz", "-o", "-ms";
+@mixin skew($angle) {
+  @each $vendor in $prefix {
+    #{$vendor}-transform: skew($angle);
+  }
+  transform: skew($angle);
+}
+
+.navSelector {
+  display: flex;
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.navSelector__button {
+  background-color: transparent;
+  display: inline-block;
+  @include skew(-15deg);
+  @include text;
+  white-space: nowrap;
+  cursor: pointer;
+
+  .unskew {
+    @include skew(15deg);
+    display: inline-block;
+  }
+}
+
+.navSelector__amateur .navSelector__amateurSelected {
+  border-top-left-radius: $radius1;
+  border-bottom-left-radius: $radius2;
+  padding: 5px 5px 5px 5px;
+  color: $button;
+  border: 2px solid $button;
+  transition: all 0.3s;
+}
+
+.navSelector__amateur:hover {
+  background-color: $button;
+  color: $button-hover;
+}
+
+.navSelector__amateurSelected {
+  border-top-left-radius: $radius1;
+  border-bottom-left-radius: $radius2;
+  padding: 5px 5px 5px 5px;
+  background-color: $button;
+  color: $button-hover;
+  border: 2px solid $button;
+  transition: all 0.3s;
+}
+
+.navSelector__porn {
+  border-bottom-right-radius: $radius1;
+  border-top-right-radius: $radius2;
+  padding: 5px 5px 5px 5px;
+  color: $button;
+  border: 2px solid $button;
+  transition: all 0.3s;
+}
+
+.navSelector__porn:hover {
+  background-color: $button;
+  color: $button-hover;
+}
+
+.navSelector__pornSelected {
+  border-bottom-right-radius: $radius1;
+  border-top-right-radius: $radius2;
+  padding: 5px 5px 5px 5px;
+  background-color: $button;
+  color: $button-hover;
+  border: 2px solid $button;
+  transition: all 0.3s;
+}
