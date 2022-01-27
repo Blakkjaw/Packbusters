@@ -6,25 +6,29 @@ import MovieIcon from '@mui/icons-material/Movie';
 import PhotoIcon from '@mui/icons-material/Photo';
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import NavSelector from './NavSelector';
+import NavPillButton from './NavPillButton';
+import { useTranslation } from 'react-i18next';
+
 
 function Navbar() {
+  const { t } = useTranslation();
   return (
   <div className='navbar'>
       <div className='navbar__left'>
         <img src="" alt=""></img>
         <h3 className='navbar__pageName'>Packbusters</h3>
         <NavSelector></NavSelector>
-        <NavButton Icon={HomeIcon} title='Home'></NavButton>
-        <NavButton Icon={MovieIcon} title='Movies'></NavButton>
-        <NavButton Icon={PhotoIcon} title='Sets'></NavButton>
-        <NavButton Icon={CollectionsBookmarkIcon} title='My Library'></NavButton>
+        <NavButton Icon={HomeIcon} title={t('navBar.home')}></NavButton>
+        <NavButton Icon={MovieIcon} title={t('navBar.movies')}></NavButton>
+        <NavButton Icon={PhotoIcon} title={t('navBar.sets')}></NavButton>
+        <NavButton Icon={CollectionsBookmarkIcon} title={t('navBar.library')}></NavButton>
         
       </div>
 
 
       <div className='navbar__right'>
-        <NavButton title='Log in'></NavButton>
-        <NavButton title='Sign up'></NavButton>
+        <NavPillButton title={t('navBar.register')}></NavPillButton>
+        <NavPillButton login={true} title={t('navBar.login')}></NavPillButton>
       </div>
   </div>
   );

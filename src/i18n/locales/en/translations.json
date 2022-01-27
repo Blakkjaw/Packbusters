@@ -1,0 +1,12 @@
+{
+    "navBar":{
+        "home":"Home",
+        "movies": "Movies",
+        "sets": "Sets",
+        "library": "My Library",
+        "register": "Register",
+        "login": "Log in",
+        "amateur": "amateur",
+        "porn": "porn"
+        }
+}

@@ -1,0 +1,40 @@
+.navPillButton {
+  height: 20px;
+  margin-top: 20px !important;
+  margin-right: 10px !important;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.navPillButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.navPillButton__login {
+  height: 20px;
+  margin-top: 20px !important;
+  background-color: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.navPillButton__login:hover {
+  background-color: #ffc107;
+  color: #000000;
+}
