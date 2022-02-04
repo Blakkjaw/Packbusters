@@ -1,4 +1,77 @@
 .carousel {
+  left: 20%;
+  flex: 0.6;
+  top: 10%;
+  width: 60%;
+  height: 36%;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  position: absolute;
+}
+
+.carousel__slide {
   display: flex;
-  justify-content: space-evenly;
+  margin: 0 15px;
+  position: relative;
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.carousel__slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.carousel__image {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.carousel__slideData {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  z-index: 78;
+  left: 0;
+  padding: 5%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.75)
+  );
+  border-radius: 10px;
+}
+
+.carousel__slideTitle {
+  color: white;
+}
+
+.carousel__slideParticipants {
+  color: white;
+}
+
+.carousel__leftArrow {
+  display: flex;
+  position: absolute;
+  top: 35vh;
+  left: 32px;
+  font-size: 3rem;
+  color: white;
+  z-index: 80;
+  user-select: none;
+  cursor: pointer;
+}
+
+.carousel__rightArrow {
+  display: flex;
+  position: absolute;
+  top: 35vh;
+  right: 32px;
+  font-size: 3rem;
+  color: white;
+  z-index: 80;
+  user-select: none;
+  cursor: pointer;
 }
