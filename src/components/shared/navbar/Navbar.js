@@ -8,6 +8,7 @@ import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import NavSelector from './NavSelector';
 import NavPillButton from './NavPillButton';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -19,11 +20,10 @@ function Navbar() {
         <img src="" alt=""></img>
         <h3>Packbusters</h3>
         <NavSelector></NavSelector>
-        <NavButton Icon={HomeIcon} title={t('navBar.home')}></NavButton>
-        <NavButton Icon={MovieIcon} title={t('navBar.movies')}></NavButton>
-        <NavButton Icon={PhotoIcon} title={t('navBar.sets')}></NavButton>
-        <NavButton Icon={CollectionsBookmarkIcon} title={t('navBar.library')}></NavButton>
-        
+        <Link to="/" style={{ textDecoration: 'none' }}><NavButton Icon={HomeIcon} title={t('navBar.home')}></NavButton></Link>
+        <Link to="/movies" style={{ textDecoration: 'none' }}><NavButton Icon={MovieIcon} title={t('navBar.movies')}></NavButton></Link>
+        <Link to="/sets" style={{ textDecoration: 'none' }}><NavButton Icon={PhotoIcon} title={t('navBar.sets')}></NavButton></Link>
+        <Link to="/my-library" style={{ textDecoration: 'none' }}><NavButton Icon={CollectionsBookmarkIcon} title={t('navBar.library')}></NavButton></Link>
       </div>
 
 

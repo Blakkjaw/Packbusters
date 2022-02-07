@@ -2,8 +2,20 @@ import React, {useEffect, useState} from 'react';
 import './Carousel.scss';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useSelector } from 'react-redux';
 
 function Carousel() {
+
+  const authenticatedUser = useSelector((state) => state.user.authenticatedUser);
+  console.log("Authenticated", authenticatedUser);
+
+  useEffect(() => {
+    // we consume the state from redux, everytime the authenticated user state changes we run this effect
+    const authenticatedUserUsername = authenticatedUser?.username;
+    console.log("Authenticated user",authenticatedUserUsername);
+  }, [authenticatedUser]); 
+  
+
   const slides = [{
     image:
       'https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
