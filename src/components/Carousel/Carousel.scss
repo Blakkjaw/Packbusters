@@ -1,13 +1,12 @@
 .carousel {
   left: 20%;
   flex: 0.6;
-  top: 10%;
-  width: 60%;
-  height: 36%;
+  max-width: 1080px;
+  max-height: 325px;
   justify-content: center;
   align-items: center;
   object-fit: contain;
-  position: absolute;
+  position: relative;
 }
 
 .carousel__slide {
@@ -21,11 +20,14 @@
 .carousel__slide.active {
   opacity: 1;
   transition-duration: 1s;
+  height: 100%;
+  width: 100%;
 }
 
 .carousel__image {
   position: relative;
   border-radius: 10px;
+  height: 100%;
   width: 100%;
 }
 
@@ -55,7 +57,7 @@
 .carousel__leftArrow {
   display: flex;
   position: absolute;
-  top: 35vh;
+  top: 15vh;
   left: 32px;
   font-size: 3rem;
   color: white;
@@ -67,7 +69,7 @@
 .carousel__rightArrow {
   display: flex;
   position: absolute;
-  top: 35vh;
+  top: 15vh;
   right: 32px;
   font-size: 3rem;
   color: white;

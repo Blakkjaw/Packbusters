@@ -90,7 +90,7 @@ function Carousel() {
   }
 
   return (
-  <section className='carousel'>
+  <div className='carousel'>
     <ArrowBackIosNewIcon className='carousel__leftArrow' onClick={prevSlide}></ArrowBackIosNewIcon>
     <ArrowForwardIosIcon className='carousel__rightArrow' onClick={nextSlide}></ArrowForwardIosIcon>
       {slides.map((slide,index)=>{
@@ -110,7 +110,7 @@ function Carousel() {
           </div>
         )
       })}
-  </section>
+  </div>
     );
 }
 
